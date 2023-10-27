@@ -1,36 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 승리요정 개발 일지
 
-## Getting Started
+## Code Convention
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. 함수 컴포넌트는 일반 함수형을 사용한다.
+2. 클래스형 컴포넌트는 사용할 수 있으나, 웬만하면 함수형을 사용한다.
+2. 이벤트 함수 및 기타 함수는 화살표 함수를 사용한다.
+3. Styled-Components의 스타일링은 함수 컴포넌트와 export 구문 사이에 작성한다.
+4. 페이지 컴포넌트는 /app 안에 작성한다.
+5. 페이지 이름으로 폴더를 작성하고 내부에 page.tsx를 만들어서 작업한다.
+6. 컴포넌트 폴더는 /components에 작성한다.
+7. 컴포넌트 이외의 커스텀 hook이나 api는 /lib에서 작성한다.
+8. 상수는 const 구문을 사용한다.
+9. 변수는 let 구문을 사용하며, var 구문은 사용하지 않는다.
+10. 정규식을 선언할 때는 변수명 앞에 소문자 r을 사용한다. (ex. const rRegs)
+11. 변수값이 바뀌면 안되는 변수명은 대문자로 쓴다.
+12. interface와 type을 선언할 때 이름은 컴포넌트의 이름을 쓰되, 이름 뒤에 확실히 어떤 용도인지 명시한다.
+13. interface와 type은 import 구문과 함수 컴포넌트 사이에 작성한다.
