@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { styled } from "styled-components";
+import { css, styled } from "styled-components";
 import SubMenu from "./SubMenu";
 
 function Header() {
@@ -12,28 +12,26 @@ function Header() {
       <HeaderBlock>
         <HeaderContent>
           <h1>
-            <Logo href="/">승리요정</Logo>
+            <Logo href="/match">승리요정</Logo>
           </h1>
           <Navigation>
             <ul>
-              <li
-                className={
-                  pathname === "/match/today" || "/match/monthly"
-                    ? "active"
-                    : ""
-                }
+              <NavItem
+                href="/match/today"
+                $today={pathname === "/match/today"}
+                $month={pathname === "/match/month"}
               >
-                <Link href="/match/today">승부예측</Link>
-              </li>
-              <li className={pathname === "/community" ? "active" : ""}>
-                <Link href="/community">커뮤니티</Link>
-              </li>
+                승부예측
+              </NavItem>
+              <NavItem href="/community" $community={pathname === "/community"}>
+                커뮤니티
+              </NavItem>
             </ul>
           </Navigation>
           <Login href="/login">로그인</Login>
         </HeaderContent>
-        {pathname === "/community" ? null : <SubMenu pathname={pathname} />}
       </HeaderBlock>
+      {pathname === "/community" || <SubMenu />}
       <Space />
     </>
   );
@@ -73,21 +71,35 @@ const Navigation = styled.nav`
   ul {
     display: flex;
     gap: 80px;
-    li {
-      &.active {
-        font-weight: 700;
-      }
-    }
   }
+`;
+
+const NavItem = styled(Link)<{
+  $today?: boolean;
+  $month?: boolean;
+  $community?: boolean;
+}>`
+  ${(props) =>
+    props.$today &&
+    css`
+      font-weight: 700;
+    `}
+  ${(props) =>
+    props.$month &&
+    css`
+      font-weight: 700;
+    `}
+  ${(props) =>
+    props.$community &&
+    css`
+      font-weight: 700;
+    `}
 `;
 
 const Login = styled(Link)`
   background: #999;
   padding: 8px 16px;
   transition: background-color 0.2s ease-in-out;
-  &:hover {
-    background: #444;
-  }
 `;
 
 const Space = styled.div`
