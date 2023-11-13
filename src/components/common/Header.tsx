@@ -12,7 +12,7 @@ function Header() {
       <HeaderBlock>
         <HeaderContent>
           <h1>
-            <Logo href="/match">승리요정</Logo>
+            <Logo href="/match/today">승리요정</Logo>
           </h1>
           <Navigation>
             <ul>
