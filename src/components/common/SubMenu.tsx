@@ -6,11 +6,11 @@ function SubMenu() {
   const pathname = usePathname();
   return (
     <SubMenuBlock>
-      <SubMenuItem className={pathname === "/match/today" ? "active" : ""}>
-        <Link href="/match/today">월간 승리요정</Link>
-      </SubMenuItem>
       <SubMenuItem className={pathname === "/match/month" ? "active" : ""}>
-        <Link href="/match/month">오늘의 승부예측</Link>
+        <Link href="/match/month">월간 승리요정</Link>
+      </SubMenuItem>
+      <SubMenuItem className={pathname === "/match/today" ? "active" : ""}>
+        <Link href="/match/today">오늘의 승부예측</Link>
       </SubMenuItem>
     </SubMenuBlock>
   );
