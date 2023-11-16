@@ -7,6 +7,7 @@ import SubMenu from "./SubMenu";
 
 function Header() {
   const pathname = usePathname();
+
   return (
     <>
       <HeaderBlock>
@@ -30,8 +31,8 @@ function Header() {
           </Navigation>
           <Login href="/login">로그인</Login>
         </HeaderContent>
+        {pathname === "/community" || <SubMenu />}
       </HeaderBlock>
-      {pathname === "/community" || <SubMenu />}
       <Space />
     </>
   );
@@ -48,6 +49,7 @@ const HeaderBlock = styled.header`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 9999;
 `;
 
 const HeaderContent = styled.div`
