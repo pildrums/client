@@ -18,10 +18,11 @@
 13. interface와 type은 import 구문과 함수 컴포넌트 사이에 작성한다.
 
 ## Commit Convention
-1. feat : 기능 구현
-2. refactor : 리팩토링
-3. fix : 버그 수정
-4. docs : 문서 편집 (readme 등)
-5. style : 코드 스타일 수정 (로직 변경은 없고 줄바꿈, 탭 등 형식만 수정할 경우)
-6. test : 테스트 코드 작성, 수정
-7. chore : 환경설정, 수정 (build.gradle에 의존성 추가, application.yml 수정 등)
+1. Feat : 기능 구현
+2. Refactor : 리팩토링
+3. Fix : 버그 수정
+4. Docs : 문서 편집 (readme 등)
+5. Style : 코드 스타일 수정 (로직 변경은 없고 줄바꿈, 탭 등 형식만 수정할 경우)
+6. Test : 테스트 코드 작성, 수정
+7. Chore : 환경설정, 수정 (build.gradle에 의존성 추가, application.yml 수정 등)
+8. Design : 스타일링 관련 변경 사항
