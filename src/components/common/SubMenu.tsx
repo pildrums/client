@@ -1,39 +1,57 @@
+"use client";
+
 import Link from "next/link";
-import { styled } from "styled-components";
+import { usePathname } from "next/navigation";
+import { useCallback, useEffect, useState } from "react";
+import classNames from "classnames/bind";
+import styles from "./SubMenu.module.scss";
 
-interface SubMenuProps {
-  pathname: string;
-}
+const cn = classNames.bind(styles);
 
-function SubMenu({ pathname }: SubMenuProps) {
+function SubMenu() {
+  const [position, setPosition] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const pathname = usePathname();
+
+  const onScroll = useCallback(() => {
+    const move = window.scrollY;
+    setVisible(position > move);
+    setPosition(move);
+  }, [position]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [onScroll]);
+
   return (
-    <SubMenuBlock>
-      <SubMenuItem className={pathname === "/match/monthly" ? "active" : ""}>
-        <Link href="/match/monthly">월간 승리요정</Link>
-      </SubMenuItem>
-      <SubMenuItem className={pathname === "/match/today" ? "active" : ""}>
+    <ul
+      className={cn(
+        `${styles.submenu_block}`,
+        visible ? `${styles.scrollUp}` : `${styles.scrollDown}`,
+      )}
+    >
+      <li
+        className={cn(
+          `${styles.submenu_item}`,
+          pathname === "/match/month" ? `${styles.active}` : "",
+        )}
+      >
+        <Link href="/match/month">월간 승리요정</Link>
+      </li>
+      <li
+        className={cn(
+          `${styles.submenu_item}`,
+          pathname === "/match/today" ? `${styles.active}` : "",
+        )}
+      >
         <Link href="/match/today">오늘의 승부예측</Link>
-      </SubMenuItem>
-    </SubMenuBlock>
+      </li>
+    </ul>
   );
 }
-
-const SubMenuBlock = styled.ul`
-  position: absolute;
-  top: 70px;
-  left: 230px;
-  display: flex;
-  gap: 20px;
-`;
-
-const SubMenuItem = styled.li`
-  width: 120px;
-  text-align: center;
-  &.active {
-    font-weight: 700;
-    border-bottom: 4px solid #000;
-    padding-bottom: 6px;
-  }
-`;
 
 export default SubMenu;

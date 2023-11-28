@@ -1,37 +1,22 @@
-"use client";
-
 import Header from "@/components/common/Header";
-import StyledComponentsRegistry from "@/lib/registry";
-import GlobalStyles from "@/styles/GlobalStyles";
-import { usePathname } from "next/navigation";
+import { Metadata } from "next";
 import { ReactNode } from "react";
-import { styled } from "styled-components";
+import "@/styles/GlobalStyles.scss";
 
-function RootLayout({ children }: { children: ReactNode }) {
-  const pathname = usePathname();
+export const metadata: Metadata = {
+  title: "승리요정",
+  description: "승리요정",
+};
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="ko">
-      <body>
-        <StyledComponentsRegistry>
-          <GlobalStyles />
-          {pathname === "/login" ? null : <Header />}
-          <LayoutBlock>
-            <LayoutContent>{children}</LayoutContent>
-          </LayoutBlock>
-        </StyledComponentsRegistry>
-      </body>
-    </html>
+    <>
+      <html lang="ko">
+        <body>
+          <Header />
+          {children}
+        </body>
+      </html>
+    </>
   );
 }
-
-const LayoutBlock = styled.div`
-  display: flex;
-  padding: 0 20px;
-`;
-
-const LayoutContent = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-export default RootLayout;
