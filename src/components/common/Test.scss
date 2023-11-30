@@ -1,0 +1,32 @@
+// BEM 예제
+.header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background: #ccc;
+  &__content {
+    width: 1320px;
+    height: inherit;
+    background: coral;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      padding: 8px 16px;
+      background: #fff;
+    }
+  }
+}
+
+.navigation {
+  &__list {
+    display: flex;
+    gap: 20px;
+    &__item {
+      border-bottom: 1px solid #fff;
+    }
+  }
+}
