@@ -1,0 +1,53 @@
+@mixin title1 {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-size: 48px;
+}
+
+@mixin title2 {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-size: 36px;
+}
+
+@mixin title3 {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-size: 24px;
+}
+
+@mixin title4 {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-size: 22px;
+}
+
+// 텍스트
+// display: block 설정 (span)
+@mixin text1 {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-size: 18px;
+  display: block;
+}
+
+@mixin text2 {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-size: 16px;
+  display: block;
+}
+
+@mixin text3 {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-size: 14px;
+  display: block;
+}
+
+@mixin caption_text {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-size: 12px;
+  display: block;
+}
