@@ -3,10 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
-import classNames from "classnames/bind";
-import styles from "./SubMenu.module.scss";
-
-const cn = classNames.bind(styles);
+import "./SubMenu.scss";
 
 function SubMenu() {
   const [position, setPosition] = useState(0);
@@ -28,25 +25,18 @@ function SubMenu() {
   }, [onScroll]);
 
   return (
-    <ul
-      className={cn(
-        `${styles.submenu_block}`,
-        visible ? `${styles.scrollUp}` : `${styles.scrollDown}`,
-      )}
-    >
+    <ul className={`submenu-block ${visible ? "scrollUp" : "scrollDown"}`}>
       <li
-        className={cn(
-          `${styles.submenu_item}`,
-          pathname === "/match/month" ? `${styles.active}` : "",
-        )}
+        className={`submenu-block__item ${
+          pathname === "/match/month" ? "active" : ""
+        }`}
       >
         <Link href="/match/month">월간 승리요정</Link>
       </li>
       <li
-        className={cn(
-          `${styles.submenu_item}`,
-          pathname === "/match/today" ? `${styles.active}` : "",
-        )}
+        className={`submenu-block__item ${
+          pathname === "/match/today" ? "active" : ""
+        }`}
       >
         <Link href="/match/today">오늘의 승부예측</Link>
       </li>
