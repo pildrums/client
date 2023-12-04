@@ -1,10 +1,11 @@
-.submenu_block {
+.submenu-block {
   position: absolute;
   z-index: 999;
   top: 70px;
   left: 230px;
   display: flex;
   gap: 20px;
+
   &.scrollDown {
     transition: opacity 0.2s ease-in-out;
     animation: scrollDown 0.2s normal;
@@ -20,6 +21,7 @@
       }
     }
   }
+
   &.scrollUp {
     transition: opacity 0.2s ease-in-out;
     animation: scrollUp 0.2s normal;
@@ -35,15 +37,15 @@
       }
     }
   }
-}
 
-.submenu_item {
-  width: 120px;
-  text-align: center;
-  cursor: pointer;
-  &.active {
-    font-weight: 700;
-    border-bottom: 4px solid #000;
-    padding-bottom: 6px;
+  &__item {
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+    &.active {
+      font-weight: 700;
+      border-bottom: 4px solid #000;
+      padding-bottom: 6px;
+    }
   }
 }
