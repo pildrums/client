@@ -1,0 +1,17 @@
+@import "@/styles/fonts.scss";
+
+.title_1 {
+  @include title1;
+}
+
+.title_2 {
+  @include title2;
+}
+
+.title_3 {
+  @include title3;
+}
+
+.title_4 {
+  @include title4;
+}
