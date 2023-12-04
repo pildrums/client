@@ -26,20 +26,29 @@ function SubMenu() {
 
   return (
     <ul className={`submenu-block ${visible ? "scrollUp" : "scrollDown"}`}>
-      <li
-        className={`submenu-block__item ${
-          pathname === "/match/month" ? "active" : ""
-        }`}
-      >
-        <Link href="/match/month">월간 승리요정</Link>
-      </li>
-      <li
-        className={`submenu-block__item ${
-          pathname === "/match/today" ? "active" : ""
-        }`}
-      >
-        <Link href="/match/today">오늘의 승부예측</Link>
-      </li>
+      <ul className="submenu-block__content">
+        <li
+          className={`submenu-block__item ${
+            pathname === "/match/previous" ? "active" : ""
+          }`}
+        >
+          <Link href="/match/previous">지난예측</Link>
+        </li>
+        <li
+          className={`submenu-block__item ${
+            pathname === "/match/month" ? "active" : ""
+          }`}
+        >
+          <Link href="/match/month">월간 승리요정</Link>
+        </li>
+        <li
+          className={`submenu-block__item ${
+            pathname === "/match/today" ? "active" : ""
+          }`}
+        >
+          <Link href="/match/today">오늘의 승부예측</Link>
+        </li>
+      </ul>
     </ul>
   );
 }
