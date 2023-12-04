@@ -3,51 +3,48 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import SubMenu from "./SubMenu";
-import styles from "./Header.module.scss";
-import classNames from "classnames/bind";
-
-const cn = classNames.bind(styles);
+import "./Header.scss";
 
 function Header() {
   const pathname = usePathname();
 
   return (
     <>
-      <header className={styles.header_block}>
-        <div className={styles.content}>
+      <header className="header-block">
+        <div className="header-block__content">
           <h1>
-            <Link className={styles.logo} href="/match/today">
+            <Link className="logo" href="/match/today">
               승리요정
             </Link>
           </h1>
-          <nav className={styles.navigation}>
+          <nav className="header-block__navigation">
             <div>
               <Link
                 href="/match/today"
-                className={cn(
-                  `${pathname === "/match/today" ? styles.active_page : ""}`,
-                  `${pathname === "/match/month" ? styles.active_page : ""}`,
-                )}
+                // todo: classname 변수로 따로 지정
+                className={`${
+                  pathname === "/match/today" ? "active-page" : ""
+                } ${pathname === "/match/month" ? "active-page" : ""} ${
+                  pathname === "/match/previous" ? "active-page" : ""
+                }`}
               >
                 승부예측
               </Link>
               <Link
-                className={cn(
-                  `${pathname === "/community" ? styles.active_page : ""}`,
-                )}
+                className={`${pathname === "/community" ? "active-page" : ""}`}
                 href="/community"
               >
                 커뮤니티
               </Link>
             </div>
           </nav>
-          <Link className={styles.login} href="/login">
+          <Link className="login" href="/login">
             로그인
           </Link>
         </div>
         {pathname === "/community" || <SubMenu />}
       </header>
-      <div className={styles.space} />
+      <div className="space" />
     </>
   );
 }
