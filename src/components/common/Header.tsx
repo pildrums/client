@@ -24,7 +24,9 @@ function Header() {
                 // todo: classname 변수로 따로 지정
                 className={`${
                   pathname === "/match/today" ? "active-page" : ""
-                } ${pathname === "/match/month" ? "active-page" : ""}`}
+                } ${pathname === "/match/month" ? "active-page" : ""} ${
+                  pathname === "/match/previous" ? "active-page" : ""
+                }`}
               >
                 승부예측
               </Link>
