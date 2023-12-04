@@ -1,0 +1,51 @@
+.submenu-block {
+  position: absolute;
+  z-index: 999;
+  top: 70px;
+  left: 230px;
+  display: flex;
+  gap: 20px;
+
+  &.scrollDown {
+    transition: opacity 0.2s ease-in-out;
+    animation: scrollDown 0.2s normal;
+    opacity: 0;
+    transform: translateY(-70px);
+    z-index: 999;
+    @keyframes scrollDown {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-20px);
+      }
+    }
+  }
+
+  &.scrollUp {
+    transition: opacity 0.2s ease-in-out;
+    animation: scrollUp 0.2s normal;
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 999;
+    @keyframes scrollUp {
+      0% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__item {
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+    &.active {
+      font-weight: 700;
+      border-bottom: 4px solid #000;
+      padding-bottom: 6px;
+    }
+  }
+}
