@@ -1,0 +1,55 @@
+.score-item-block {
+  height: 80px;
+  background: #eee;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  position: relative;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    flex-flow: row-reverse;
+    gap: 8px;
+  }
+}
+
+.team-img {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.team-info-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.team-info-right {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-end;
+}
+
+.winner {
+  background: #ccc;
+  width: 800px;
+  height: 80px;
+  position: absolute;
+  right: 0;
+  padding: 0 10px;
+  border-radius: 0 8px 8px 0;
+  border: 2px solid #707070;
+}
