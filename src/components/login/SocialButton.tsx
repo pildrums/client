@@ -9,8 +9,8 @@ type SocialButtonProps = {
 
 function SocialButton({ title, link, icon }: SocialButtonProps) {
   return (
-    <Link href={link}>
-      <button className="SocialButton">
+    <Link href={link} className="Social-link">
+      <button className="Social-button">
         {icon}
         {title}
       </button>
