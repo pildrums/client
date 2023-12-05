@@ -1,9 +1,13 @@
 "use client";
 
+import DateSection from "@/components/today/DateSection";
+import ScoreBoard from "@/components/today/ScoreBoard";
+
 function TodayPage() {
   return (
     <>
-      <div>오늘의 승부예측</div>
+      <DateSection />
+      <ScoreBoard />
     </>
   );
 }
