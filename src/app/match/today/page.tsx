@@ -1,5 +1,5 @@
 import DateSection from "@/components/today/DateSection";
-import ScoreBoard from "@/components/today/ScoreBoard";
+import ScoreBoard from "@/components/today/ScoreList";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
