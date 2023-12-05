@@ -4,8 +4,7 @@ import { ReactNode } from "react";
 import "@/styles/GlobalStyles.scss";
 
 export const metadata: Metadata = {
-  title: "승리요정",
-  description: "승리요정",
+  title: "플레이닷",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
