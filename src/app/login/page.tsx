@@ -1,15 +1,20 @@
-import Link from "next/link";
+import { Metadata } from "next";
+import Title from "./_components/Title";
+import Container from "./_components/Container";
+import SocialButtons from "./_components/SocialButtons";
+
+export const metadata: Metadata = {
+  title: "플레이닷 - 로그인",
+};
 
 function LoginPage() {
   return (
-    <>
-      <head>
-        <title>승리요정 - 로그인</title>
-        <meta name="description" content="승리요정 로그인" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </head>
-      <Link href="/">홈으로</Link>
-    </>
+    <Container>
+      <Title title="Login" />
+      <p>지금 바로 가입 후, 좋아하는 구단의 승부를 예측해보세요!</p>
+
+      <SocialButtons />
+    </Container>
   );
 }
 
