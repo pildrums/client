@@ -1,7 +1,9 @@
+@import "@/styles/colors.scss";
+
 .header-block {
   width: 100%;
-  height: 50px;
-  background: #ccc;
+  height: 90px;
+  background: $header;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,20 +16,28 @@
   &__content {
     width: 1200px;
     height: inherit;
-    background: coral;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 999;
+    // background: coral;
   }
 
   &__navigation {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-self: flex-end;
     div {
       display: flex;
-      gap: 80px;
+      gap: 160px;
+      a {
+        color: $dark-text1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        font-size: 24px;
+      }
     }
   }
 }
@@ -44,9 +54,18 @@
 }
 
 .active-page {
+  // important 구문 빼야 함
+  color: #fff !important;
   font-weight: 700;
 }
 
 .space {
   margin-bottom: 100px;
+}
+
+.underbar {
+  width: 50px;
+  height: 8px;
+  background: $main;
+  border-radius: 4px 4px 0 0;
 }

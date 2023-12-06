@@ -1,4 +1,4 @@
-import { getAccessTokenCookie } from "../etc/cookies";
+import { getAccessTokenCookie } from "../cookies/cookies";
 import { instance } from "./instance";
 
 type Method = "get" | "post" | "put" | "delete";

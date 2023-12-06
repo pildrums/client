@@ -3,7 +3,7 @@
   height: 50px;
   position: absolute;
   z-index: 998;
-  top: 50px;
+  top: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,8 @@
     display: flex;
     gap: 40px;
     position: relative;
-    left: -30px;
+    left: -92px;
+    top: 6px;
   }
 
   &__item {
