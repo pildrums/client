@@ -29,12 +29,22 @@ function Header() {
                 }`}
               >
                 승부예측
+                <div
+                  className={`${
+                    pathname === "/match/today" ? "underbar" : ""
+                  } ${pathname === "/match/month" ? "underbar" : ""} ${
+                    pathname === "/match/previous" ? "underbar" : ""
+                  }`}
+                />
               </Link>
               <Link
                 className={`${pathname === "/community" ? "active-page" : ""}`}
                 href="/community"
               >
                 커뮤니티
+                <div
+                  className={`${pathname === "/community" ? "underbar" : ""}`}
+                ></div>
               </Link>
             </div>
           </nav>
