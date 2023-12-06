@@ -21,11 +21,6 @@
   &__item {
     text-align: center;
     cursor: pointer;
-    &.active {
-      font-weight: 700;
-      border-bottom: 4px solid #000;
-      padding-bottom: 6px;
-    }
   }
 }
 
@@ -34,7 +29,6 @@
   animation: scrollDown 0.2s normal;
   opacity: 0;
   transform: translateY(-70px);
-  // z-index: 998;
   @keyframes scrollDown {
     0% {
       transform: translateY(0);
@@ -50,7 +44,6 @@
   animation: scrollUp 0.2s normal;
   opacity: 1;
   transform: translateY(0);
-  // z-index: 998;
   @keyframes scrollUp {
     0% {
       transform: translateY(-20px);
@@ -59,4 +52,10 @@
       transform: translateY(0);
     }
   }
+}
+
+.active {
+  font-weight: 700;
+  border-bottom: 4px solid #000;
+  padding-bottom: 6px;
 }

@@ -8,7 +8,6 @@ import usePath from "@/lib/hooks/usePath";
 
 function Header() {
   const pathname = usePathname();
-  if (pathname === "/login") return;
 
   const {
     ACTIVE_MATCH_CLASSNAME,
@@ -17,7 +16,9 @@ function Header() {
     UNDERBAR_MATCH_CLASSNAME,
     PATH,
   } = usePath();
-        
+
+  if (pathname === "/login") return;
+
   return (
     <>
       <header className="header-block">
