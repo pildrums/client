@@ -1,0 +1,16 @@
+.SocialButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 48px;
+  width: fit-content;
+}
+
+.Social-link {
+  width: 300px;
+}
+
+.Social-button {
+  width: 100%;
+  height: 32px;
+}
