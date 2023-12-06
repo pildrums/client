@@ -7,7 +7,7 @@ import "./Header.scss";
 
 function Header() {
   const pathname = usePathname();
-  if (pathname === "/login" || "/signup") return;
+  if (pathname === "/login") return;
   return (
     <>
       <header className="header-block">
