@@ -1,5 +1,5 @@
 import Text from "../common/Text";
-import { Title3 } from "../common/Title";
+import Title from "../common/Title";
 import "./ScoreListItem.scss";
 
 function ScoreListItem() {
@@ -8,15 +8,15 @@ function ScoreListItem() {
       <div className="score-item-block__left">
         <div className="team-img"></div>
         <div className="team-info-left">
-          <Text text3="text-3">기아타이거즈</Text>
-          <Title3>50%</Title3>
+          <Text small>기아타이거즈</Text>
+          <Title medium>50%</Title>
         </div>
       </div>
       <div className="score-item-block__right winner">
         <div className="team-img"></div>
         <div className="team-info-right">
-          <Text text3="text-3">두산베어스</Text>
-          <Title3>80%</Title3>
+          <Text small>두산베어스</Text>
+          <Title medium>80%</Title>
         </div>
       </div>
     </li>
