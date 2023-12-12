@@ -1,6 +1,6 @@
-import classNames from "classnames";
-import "./Text.scss";
 import { ReactNode } from "react";
+import "./Text.scss";
+import classNames from "classnames";
 
 interface TextProps {
   children: ReactNode;
