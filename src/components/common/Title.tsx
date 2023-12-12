@@ -12,10 +12,10 @@ interface TitleProps {
 
 /**
  * 커스텀 타이틀 컴포넌트
- * @param large 18px / 500(medium)
- * @param medium 16px / 500(medium)
- * @param small 14px / 500(medium)
- * @param caption 12px / 400(normal)
+ * @param largest 48px / 700(bold)
+ * @param large 36px / 600(semi bold)
+ * @param medium 24px / 600(semi bold)
+ * @param small 22px / 500(medium)
  */
 function Title({ children, largest, large, medium, small }: TitleProps) {
   return (
