@@ -1,17 +1,34 @@
+import classNames from "classnames";
 import "./Text.scss";
 import { ReactNode } from "react";
 
 interface TextProps {
   children: ReactNode;
-  text1?: string;
-  text2?: string;
-  text3?: string;
-  captionText?: string;
+  large?: boolean;
+  medium?: boolean;
+  small?: boolean;
+  caption?: boolean;
 }
 
-function Text({ children, text1, text2, text3, captionText }: TextProps) {
+/**
+ * 커스텀 텍스트 컴포넌트
+ * @param large 18px / 500(medium)
+ * @param medium 16px / 500(medium)
+ * @param small 14px / 500(medium)
+ * @param caption 12px / 400(normal)
+ */
+function Text({ children, large, medium, small, caption }: TextProps) {
   return (
-    <span className={text1 || text2 || text3 || captionText}>{children}</span>
+    <span
+      className={classNames(
+        `${large && "text-1"}`,
+        `${medium && "text-2"}`,
+        `${small && "text-3"}`,
+        `${caption && "caption-text"}`,
+      )}
+    >
+      {children}
+    </span>
   );
 }
 
