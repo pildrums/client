@@ -1,0 +1,15 @@
+.bubble-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  &__img {
+    background-color: black;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  &__name {
+  }
+  &__text {
+  }
+}
