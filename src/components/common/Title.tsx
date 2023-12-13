@@ -1,44 +1,35 @@
 import { ReactNode } from "react";
 import "./Title.scss";
+import classNames from "classnames";
 
 interface TitleProps {
   children: ReactNode;
+  largest?: boolean;
+  large?: boolean;
+  medium?: boolean;
+  small?: boolean;
 }
 
 /**
- * @description 48px / bold(700)
- * @param children
- * @returns Title1 컴포넌트
+ * 커스텀 타이틀 컴포넌트
+ * @param largest 48px / 700(bold)
+ * @param large 36px / 600(semi bold)
+ * @param medium 24px / 600(semi bold)
+ * @param small 22px / 500(medium)
  */
-function Title1({ children }: TitleProps) {
-  return <h1 className="title_1">{children}</h1>;
+function Title({ children, largest, large, medium, small }: TitleProps) {
+  return (
+    <h2
+      className={classNames(
+        `${largest && "title-1"}`,
+        `${large && "title-2"}`,
+        `${medium && "title-3"}`,
+        `${small && "title-4"}`,
+      )}
+    >
+      {children}
+    </h2>
+  );
 }
 
-/**
- * @description 36px / semi-bold(600)
- * @param children
- * @returns Title2 컴포넌트
- */
-function Title2({ children }: TitleProps) {
-  return <h2 className="title_2">{children}</h2>;
-}
-
-/**
- * @description 24px / semi-bold(600)
- * @param children
- * @returns Title3 컴포넌트
- */
-function Title3({ children }: TitleProps) {
-  return <h3 className="title_3">{children}</h3>;
-}
-
-/**
- * @description 22px / medium(500)
- * @param children
- * @returns Title4 컴포넌트
- */
-function Title4({ children }: TitleProps) {
-  return <h4 className="title_4">{children}</h4>;
-}
-
-export { Title1, Title2, Title3, Title4 };
+export default Title;

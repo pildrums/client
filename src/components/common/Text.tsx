@@ -1,44 +1,35 @@
-import "./Text.scss";
 import { ReactNode } from "react";
+import "./Text.scss";
+import classNames from "classnames";
 
 interface TextProps {
   children: ReactNode;
+  large?: boolean;
+  medium?: boolean;
+  small?: boolean;
+  caption?: boolean;
 }
 
 /**
- * @description 18px / medium(500)
- * @param children
- * @returns Text1 컴포넌트
+ * 커스텀 텍스트 컴포넌트
+ * @param large 18px / 500(medium)
+ * @param medium 16px / 500(medium)
+ * @param small 14px / 500(medium)
+ * @param caption 12px / 400(normal)
  */
-function Text1({ children }: TextProps) {
-  return <span className="text_1">{children}</span>;
+function Text({ children, large, medium, small, caption }: TextProps) {
+  return (
+    <span
+      className={classNames(
+        `${large && "text-1"}`,
+        `${medium && "text-2"}`,
+        `${small && "text-3"}`,
+        `${caption && "caption-text"}`,
+      )}
+    >
+      {children}
+    </span>
+  );
 }
 
-/**
- * @description 16px / medium(500)
- * @param children
- * @returns Text2 컴포넌트
- */
-function Text2({ children }: TextProps) {
-  return <span className="text_2">{children}</span>;
-}
-
-/**
- * @description 14px / medium(500)
- * @param children
- * @returns Text3 컴포넌트
- */
-function Text3({ children }: TextProps) {
-  return <span className="text_3">{children}</span>;
-}
-
-/**
- * @description 12px / normal(400)
- * @param children
- * @returns Caption 컴포넌트
- */
-function Caption({ children }: TextProps) {
-  return <span className="caption_text">{children}</span>;
-}
-
-export { Text1, Text2, Text3, Caption };
+export default Text;
