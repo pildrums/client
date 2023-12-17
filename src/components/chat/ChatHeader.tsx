@@ -1,4 +1,4 @@
-import "./ChatHeader.scss";
+import "@/components/chat/ChatHeader.scss";
 
 function ChatHeader() {
   return (

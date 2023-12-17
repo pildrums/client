@@ -1,5 +1,5 @@
-import ChatBubble from "./ChatBubble";
-import "./ChatLog.scss";
+import ChatBubble from "@/components/chat/chatlog/ChatBubble";
+import "@/components/chat/chatlog/ChatLog.scss";
 
 function ChatLog() {
   return (

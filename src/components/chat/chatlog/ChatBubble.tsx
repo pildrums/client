@@ -1,4 +1,4 @@
-import "./ChatBubble.scss";
+import "@/components/chat/chatlog/ChatBubble.scss";
 
 function ChatBubble() {
   return (

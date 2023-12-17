@@ -1,4 +1,4 @@
-import "./ChatInput.scss";
+import "@/components/chat/ChatInput.scss";
 
 function ChatInput() {
   return (

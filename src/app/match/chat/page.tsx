@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import "./page.scss";
+import "@/app/match/chat/page.scss";
 import ChatHeader from "@/components/chat/ChatHeader";
 import ChatLog from "@/components/chat/chatlog/ChatLog";
 import FloatingArea from "@/components/chat/FloatingArea";
