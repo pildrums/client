@@ -1,0 +1,13 @@
+.floatingarea {
+  box-sizing: border-box;
+  position: fixed;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 16px;
+  z-index: 999;
+  width: 100%;
+  max-width: 1200px;
+  height: calc(100% - 100px);
+  padding: 20px;
+  pointer-events: none;
+}
