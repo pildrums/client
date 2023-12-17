@@ -1,12 +1,8 @@
 .input-container {
   width: 100%;
-  max-width: 1150px;
   height: 70px;
   display: flex;
-  position: fixed;
-  bottom: 20px;
   justify-content: space-between;
-  z-index: 9;
   background-color: #fff;
   border-radius: 12px;
   &__button {
