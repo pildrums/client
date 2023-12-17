@@ -1,25 +1,43 @@
+@import "@/styles/colors.scss";
+
 .score-item-block {
   height: 80px;
-  background: #eee;
+  background: $surface;
   margin-bottom: 20px;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
   position: relative;
 
   &__left {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 24px;
+    cursor: pointer;
+    width: 50%;
+    height: inherit;
+    padding: 0 40px;
+    border-radius: 8px;
+    &:hover {
+      background: linear-gradient(to right, #ff7854, #fd493f, $surface);
+    }
   }
 
   &__right {
     display: flex;
     align-items: center;
     flex-flow: row-reverse;
-    gap: 8px;
+    gap: 24px;
+    cursor: pointer;
+    // width 값은 선택한 비율에 따라 바꾸도록 변경
+    width: 50%;
+    height: inherit;
+    padding: 0 40px;
+    border-radius: 8px;
+    &:hover {
+      background: linear-gradient(to right, $surface, #53a1ff, #5c70ff);
+    }
   }
 }
 
@@ -43,13 +61,10 @@
   align-items: flex-end;
 }
 
-.winner {
-  background: #ccc;
-  width: 800px;
-  height: 80px;
-  position: absolute;
-  right: 0;
-  padding: 0 10px;
-  border-radius: 0 8px 8px 0;
-  border: 2px solid #707070;
+.active-left {
+  background: linear-gradient(to right, #ff7854, #fd493f);
+}
+
+.active-right {
+  background: linear-gradient(to right, #53a1ff, #5c70ff);
 }
