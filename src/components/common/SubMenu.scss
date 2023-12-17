@@ -1,5 +1,3 @@
-@import "@/styles/colors.scss";
-
 .submenu-block {
   width: 100%;
   height: 50px;
@@ -10,11 +8,7 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
-  background: $dark-bg;
-
-  a {
-    color: $dark-text1;
-  }
+  background: #fff;
 
   &__content {
     display: flex;
@@ -62,9 +56,6 @@
 
 .active {
   font-weight: 700;
-  border-bottom: 4px solid #fff;
+  border-bottom: 4px solid #000;
   padding-bottom: 6px;
-  a {
-    color: #fff;
-  }
 }
