@@ -5,13 +5,16 @@ import Text from "../common/Text";
 import Title from "../common/Title";
 import "./ScoreListItem.scss";
 import classNames from "classnames";
+import Image from "next/image";
 
 interface ScoreListItemProps {
   home: string;
   away: string;
+  homeImg: string;
+  awayImg: string;
 }
 
-function ScoreListItem({ home, away }: ScoreListItemProps) {
+function ScoreListItem({ home, away, homeImg, awayImg }: ScoreListItemProps) {
   // Todo: left, right를 selectTeam으로 리팩토링
   const [selectHome, setSelectHome] = useState(false);
   const [selectAway, setSelectAway] = useState(false);
@@ -34,7 +37,9 @@ function ScoreListItem({ home, away }: ScoreListItemProps) {
         )}
         onClick={onClickLeft}
       >
-        <div className="team-img"></div>
+        <div className="team-img">
+          <Image src={homeImg} alt="lions" width={55} height={55} />
+        </div>
         <div className="team-info-left">
           {selectHome ? <Text small>{home}</Text> : <Text large>{home}</Text>}
           {selectHome && <Title medium>50%</Title>}
@@ -46,7 +51,9 @@ function ScoreListItem({ home, away }: ScoreListItemProps) {
         )}
         onClick={onClickRight}
       >
-        <div className="team-img"></div>
+        <div className="team-img">
+          <Image src={awayImg} alt="lions" width={55} height={55} />
+        </div>
         <div className="team-info-right">
           {selectAway ? <Text small>{away}</Text> : <Text large>{away}</Text>}
           {selectAway && <Title medium>50%</Title>}
