@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import SubMenu from "./SubMenu";
 import "./Header.scss";
 import usePath from "@/lib/hooks/usePath";
+import Image from "next/image";
 
 function Header() {
   const pathname = usePathname();
@@ -24,8 +25,13 @@ function Header() {
       <header className="header-block">
         <div className="header-block__content">
           <h1>
-            <Link href={PATH.today} className="logo">
-              승리요정
+            <Link href={PATH.today}>
+              <Image
+                src="/images/logo.svg"
+                width={150}
+                height={45}
+                alt="logo"
+              />
             </Link>
           </h1>
           <nav className="header-block__navigation">
