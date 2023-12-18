@@ -53,7 +53,7 @@ function Header() {
             로그인
           </Link>
         </div>
-        {pathname === "/community" || <SubMenu />}
+        {pathname === "/community" || pathname === "/match/chat" || <SubMenu />}
       </header>
       <div className="space" />
     </>
