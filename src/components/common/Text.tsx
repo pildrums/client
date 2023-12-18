@@ -21,10 +21,10 @@ function Text({ children, large, medium, small, caption }: TextProps) {
   return (
     <span
       className={classNames(
-        `${large && "text-1"}`,
-        `${medium && "text-2"}`,
-        `${small && "text-3"}`,
-        `${caption && "caption-text"}`,
+        `${large ? "text-1" : ""}`,
+        `${medium ? "text-2" : ""}`,
+        `${small ? "text-3" : ""}`,
+        `${caption ? "caption-text" : ""}`,
       )}
     >
       {children}

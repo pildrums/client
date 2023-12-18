@@ -1,18 +1,25 @@
 import { Meta, StoryObj } from "@storybook/react";
-import Text from "./Text";
+import Title from "./Title";
 
-const meta: Meta<typeof Text> = {
-  component: Text,
+const meta: Meta<typeof Title> = {
+  component: Title,
   argTypes: {
+    largest: { control: true },
     large: { control: true },
     medium: { control: true },
     small: { control: true },
-    caption: { control: true },
   },
 };
 
 export default meta;
-type Story = StoryObj<typeof Text>;
+type Story = StoryObj<typeof Title>;
+
+export const Largest: Story = {
+  args: {
+    children: "Largest",
+    largest: true,
+  },
+};
 
 export const Large: Story = {
   args: {
@@ -20,21 +27,17 @@ export const Large: Story = {
     large: true,
   },
 };
+
 export const Medium: Story = {
   args: {
     children: "Medium",
     medium: true,
   },
 };
+
 export const Small: Story = {
   args: {
     children: "Small",
     small: true,
-  },
-};
-export const Caption: Story = {
-  args: {
-    children: "Caption",
-    caption: true,
   },
 };

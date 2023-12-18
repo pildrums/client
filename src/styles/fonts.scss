@@ -1,26 +1,32 @@
+@import "./colors.scss";
+
 // 타이틀
 @mixin title1 {
   font-family: "Pretendard";
   font-weight: 700;
   font-size: 48px;
+  color: $dark-text2;
 }
 
 @mixin title2 {
   font-family: "Pretendard";
   font-weight: 600;
   font-size: 36px;
+  color: $dark-text2;
 }
 
 @mixin title3 {
   font-family: "Pretendard";
   font-weight: 600;
   font-size: 24px;
+  color: $dark-text2;
 }
 
 @mixin title4 {
   font-family: "Pretendard";
   font-weight: 500;
   font-size: 22px;
+  color: $dark-text2;
 }
 
 // 텍스트
@@ -30,6 +36,7 @@
   font-weight: 500;
   font-size: 18px;
   display: block;
+  color: $dark-text2;
 }
 
 @mixin text2 {
@@ -37,6 +44,7 @@
   font-weight: 500;
   font-size: 16px;
   display: block;
+  color: $dark-text2;
 }
 
 @mixin text3 {
@@ -44,6 +52,7 @@
   font-weight: 500;
   font-size: 14px;
   display: block;
+  color: $dark-text2;
 }
 
 @mixin caption-text {
@@ -51,4 +60,5 @@
   font-weight: 400;
   font-size: 12px;
   display: block;
+  color: $dark-text2;
 }

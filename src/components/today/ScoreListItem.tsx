@@ -1,22 +1,62 @@
+"use client";
+
+import { useCallback, useState } from "react";
 import Text from "../common/Text";
 import Title from "../common/Title";
 import "./ScoreListItem.scss";
+import classNames from "classnames";
+import Image from "next/image";
 
-function ScoreListItem() {
+interface ScoreListItemProps {
+  home: string;
+  away: string;
+  homeImg: string;
+  awayImg: string;
+}
+
+function ScoreListItem({ home, away, homeImg, awayImg }: ScoreListItemProps) {
+  // Todo: left, right를 selectTeam으로 리팩토링
+  const [selectHome, setSelectHome] = useState(false);
+  const [selectAway, setSelectAway] = useState(false);
+
+  const onClickLeft = useCallback(() => {
+    setSelectHome(!selectHome);
+    setSelectAway(false);
+  }, [selectHome]);
+
+  const onClickRight = useCallback(() => {
+    setSelectAway(!selectAway);
+    setSelectHome(false);
+  }, [selectAway]);
+
   return (
     <li className="score-item-block">
-      <div className="score-item-block__left">
-        <div className="team-img"></div>
+      <div
+        className={classNames(
+          `score-item-block__left ${selectHome ? "active-left" : ""}`,
+        )}
+        onClick={onClickLeft}
+      >
+        <div className="team-img">
+          <Image src={homeImg} alt="lions" width={55} height={55} />
+        </div>
         <div className="team-info-left">
-          <Text small>기아타이거즈</Text>
-          <Title medium>50%</Title>
+          {selectHome ? <Text small>{home}</Text> : <Text large>{home}</Text>}
+          {selectHome && <Title medium>50%</Title>}
         </div>
       </div>
-      <div className="score-item-block__right winner">
-        <div className="team-img"></div>
+      <div
+        className={classNames(
+          `score-item-block__right ${selectAway ? "active-right" : ""}`,
+        )}
+        onClick={onClickRight}
+      >
+        <div className="team-img">
+          <Image src={awayImg} alt="lions" width={55} height={55} />
+        </div>
         <div className="team-info-right">
-          <Text small>두산베어스</Text>
-          <Title medium>80%</Title>
+          {selectAway ? <Text small>{away}</Text> : <Text large>{away}</Text>}
+          {selectAway && <Title medium>50%</Title>}
         </div>
       </div>
     </li>

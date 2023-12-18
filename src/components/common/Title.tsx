@@ -21,10 +21,10 @@ function Title({ children, largest, large, medium, small }: TitleProps) {
   return (
     <h2
       className={classNames(
-        `${largest && "title-1"}`,
-        `${large && "title-2"}`,
-        `${medium && "title-3"}`,
-        `${small && "title-4"}`,
+        `${largest ? "title-1" : ""}`,
+        `${large ? "title-2" : ""}`,
+        `${medium ? "title-3" : ""}`,
+        `${small ? "title-4" : ""}`,
       )}
     >
       {children}
