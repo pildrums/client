@@ -1,32 +1,16 @@
-import "./SocialButtons.scss";
-import SocialButton from "./SocialButton";
+"use client";
 
-const links = [
-  {
-    title: "카카오로 계속하기",
-    link: "/",
-    icon: "",
-  },
-  {
-    title: "구글로 계속하기",
-    link: "/",
-    icon: "",
-  },
-  {
-    title: "네이버로 계속하기",
-    link: "/",
-    icon: "",
-  },
-];
+import GoogleLogin from "./GoogleLogin";
+import KakaoLogin from "./KakaoLogin";
+import NaverLogin from "./NaverLogin";
+import "./SocialButtons.scss";
 
 function SocialButtons() {
   return (
-    <div className="SocialButtons">
-      {links.map(({ title, link, icon }) => {
-        return (
-          <SocialButton key={title} title={title} link={link} icon={icon} />
-        );
-      })}
+    <div className="Social-Buttons">
+      <KakaoLogin />
+      <GoogleLogin />
+      <NaverLogin />
     </div>
   );
 }
