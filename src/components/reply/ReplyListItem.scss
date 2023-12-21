@@ -1,0 +1,50 @@
+.item-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+  &__comment {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    button {
+      border: none;
+      padding: 8px 16px;
+      border-radius: 40px;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+      &:last-child {
+        background: #333;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.profile-image {
+  background: #ccc;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  &__reply {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
