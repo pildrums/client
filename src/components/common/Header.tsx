@@ -31,6 +31,7 @@ function Header() {
                 width={150}
                 height={45}
                 alt="logo"
+                priority={true}
               />
             </Link>
           </h1>
