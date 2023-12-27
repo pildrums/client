@@ -1,0 +1,67 @@
+@import "@/styles/colors.scss";
+
+.comment-block {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    width: 1200px;
+    border-radius: 8px;
+    background: $surface;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+    outline: none;
+    border: none;
+    &:focus {
+      outline: none;
+      border: none;
+    }
+    &:hover {
+      background: #ccc;
+    }
+    &:active {
+      background: #333;
+    }
+    svg {
+      font-size: 24px;
+    }
+  }
+}
+
+.comment-input {
+  height: 50px;
+  margin-bottom: 24px;
+  background: $gray;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  &:focus {
+    outline: none;
+    &::placeholder {
+      color: transparent;
+    }
+  }
+}
