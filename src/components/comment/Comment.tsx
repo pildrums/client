@@ -4,7 +4,7 @@ import "./Comment.scss";
 import { ChangeEvent, FormEvent, useCallback, useState } from "react";
 import { MdRefresh } from "react-icons/md";
 import Title from "../common/Title";
-import ReplyList from "./CommentList";
+import CommentList from "./CommentList";
 
 export interface CommentData {
   id?: number;
@@ -149,7 +149,7 @@ function Comment() {
           onChange={onChange}
           placeholder="댓글을 입력해주세요."
         />
-        <ReplyList comment={comment} />
+        <CommentList comment={comment} />
       </form>
     </section>
   );
