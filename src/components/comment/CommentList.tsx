@@ -1,6 +1,6 @@
 import { CommentData } from "./Comment";
 import "./CommentList.scss";
-import ReplyListItem from "./CommentListItem";
+import CommentListItem from "./CommentListItem";
 
 interface CommentListProps {
   comment: CommentData[];
@@ -11,7 +11,7 @@ function ReplyList({ comment }: CommentListProps) {
     <ul className="comment-list-block">
       {comment.map((item) => (
         <>
-          <ReplyListItem
+          <CommentListItem
             key={item.id}
             username={item.username}
             team={item.team}
