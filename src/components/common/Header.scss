@@ -42,15 +42,42 @@
 }
 
 .login {
-  background: #999;
-  padding: 8px 16px;
-  transition: background-color 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  &__logo {
+    width: 24px;
+    height: 24px;
+    background: $login-bg;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    svg {
+      font-size: 20px;
+      border-radius: 43%;
+      color: $login-obj;
+    }
+  }
+  span {
+    transition: color 0.2s ease-in-out;
+    color: $dark-text1;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  &:hover {
+    span {
+      color: $dark-text2;
+    }
+  }
 }
 
 .active-page {
   // important 구문 빼야 함
-  color: #fff !important;
-  font-weight: 700;
+  color: $dark-text2 !important;
+  font-weight: 600;
 }
 
 .space {
