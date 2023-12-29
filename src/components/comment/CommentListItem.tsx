@@ -4,6 +4,7 @@ import Text from "../common/Text";
 import TeamTag from "../tag/TeamTag";
 import { CommentData } from "./Comment";
 import "./CommentListItem.scss";
+import { FiThumbsUp } from "react-icons/fi";
 
 import { ChangeEvent, useCallback, useState } from "react";
 
@@ -38,9 +39,17 @@ function CommentListItem({ username, team, comment }: CommentData) {
           </div>
         </div>
         <div className="item-block__button">
-          <button>좋아요</button>
-          <Text small>36</Text>
-          <button>신고</button>
+          <div className="item-block__button__date">
+            <span>2023.12.15</span>
+            <span>신고</span>
+          </div>
+          <div className="item-block__button__like">
+            <Text>좋아요</Text>
+            <span>15</span>
+            <div className="like-btn">
+              <FiThumbsUp />
+            </div>
+          </div>
         </div>
       </li>
       {visibleReply && (
