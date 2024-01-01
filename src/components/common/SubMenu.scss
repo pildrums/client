@@ -9,7 +9,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
   background: $dark-bg;
 
   a {
@@ -18,9 +17,9 @@
 
   &__content {
     display: flex;
-    gap: 40px;
+    gap: 60px;
     position: relative;
-    left: -92px;
+    left: -76px;
     top: 6px;
   }
 
