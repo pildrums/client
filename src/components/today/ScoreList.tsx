@@ -35,7 +35,7 @@ const match = [
     home: "한화 이글스",
     away: "키움 히어로즈",
     homeImg: "/images/eagles.svg",
-    awayImg: "/images/heros.svg",
+    awayImg: "/images/heroes.svg",
   },
 ];
 

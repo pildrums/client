@@ -15,7 +15,10 @@ function DateSection() {
         <Title large>{day}</Title>
       </div>
       <div className="date-block__text">
-        <Text medium>투표는 {`${day}`} 경기 시작 전까지 가능합니다.</Text>
+        <Text medium>
+          투표는 <span className="emphasis">{`${day} 경기 시작 전`}</span>까지
+          가능합니다.
+        </Text>
         <Text medium>투표를 통해 우리팀을 응원해주세요!</Text>
       </div>
     </section>
