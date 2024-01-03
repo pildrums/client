@@ -6,21 +6,19 @@ interface CommentListProps {
   comment: CommentData[];
 }
 
-function ReplyList({ comment }: CommentListProps) {
+function CommentList({ comment }: CommentListProps) {
   return (
     <ul className="comment-list-block">
       {comment.map((item) => (
-        <>
-          <CommentListItem
-            key={item.id}
-            username={item.username}
-            team={item.team}
-            comment={item.comment}
-          />
-        </>
+        <CommentListItem
+          key={item.id}
+          username={item.username}
+          team={item.team}
+          comment={item.comment}
+        />
       ))}
     </ul>
   );
 }
 
-export default ReplyList;
+export default CommentList;

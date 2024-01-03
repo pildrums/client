@@ -18,15 +18,18 @@ function ScoreListItem({ home, away, homeImg, awayImg }: ScoreListItemProps) {
   // Todo: left, right를 selectTeam으로 리팩토링
   const [selectHome, setSelectHome] = useState(false);
   const [selectAway, setSelectAway] = useState(false);
+  const [average, setAverage] = useState(false);
 
   const onClickLeft = useCallback(() => {
     setSelectHome(!selectHome);
     setSelectAway(false);
+    setAverage(true);
   }, [selectHome]);
 
   const onClickRight = useCallback(() => {
     setSelectAway(!selectAway);
     setSelectHome(false);
+    setAverage(true);
   }, [selectAway]);
 
   return (
@@ -42,7 +45,7 @@ function ScoreListItem({ home, away, homeImg, awayImg }: ScoreListItemProps) {
         </div>
         <div className="team-info-left">
           {selectHome ? <Text small>{home}</Text> : <Text large>{home}</Text>}
-          {selectHome && <Title medium>50%</Title>}
+          {average && <Title medium>50%</Title>}
         </div>
       </div>
       <div
@@ -56,7 +59,7 @@ function ScoreListItem({ home, away, homeImg, awayImg }: ScoreListItemProps) {
         </div>
         <div className="team-info-right">
           {selectAway ? <Text small>{away}</Text> : <Text large>{away}</Text>}
-          {selectAway && <Title medium>50%</Title>}
+          {average && <Title medium>50%</Title>}
         </div>
       </div>
     </li>
