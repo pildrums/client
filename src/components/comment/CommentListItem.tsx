@@ -53,7 +53,7 @@ function CommentListItem({ username, team, comment }: CommentData) {
           </div>
         </div>
       </li>
-      {visibleReply && <Reply reply='' onChange={onChange} />}
+      {visibleReply && <Reply reply={reply} onChange={onChange} />}
     </>
   );
 }
