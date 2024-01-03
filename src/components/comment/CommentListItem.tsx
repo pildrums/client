@@ -7,6 +7,7 @@ import "./CommentListItem.scss";
 import { FiThumbsUp } from "react-icons/fi";
 
 import { ChangeEvent, useCallback, useState } from "react";
+import Reply from "./Reply";
 
 function CommentListItem({ username, team, comment }: CommentData) {
   const [visibleReply, setVisibleReply] = useState(false);
@@ -52,17 +53,7 @@ function CommentListItem({ username, team, comment }: CommentData) {
           </div>
         </div>
       </li>
-      {visibleReply && (
-        <div className="reply-block">
-          <input
-            className="reply-input"
-            type="text"
-            onChange={onChange}
-            value={reply}
-            placeholder="답글을 입력하세요."
-          />
-        </div>
-      )}
+      {visibleReply && <Reply reply={reply} onChange={onChange} />}
     </>
   );
 }
