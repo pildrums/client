@@ -6,6 +6,7 @@ import SubMenu from "./SubMenu";
 import "./Header.scss";
 import usePath from "@/lib/hooks/usePath";
 import Image from "next/image";
+import { FaUser } from "react-icons/fa6";
 
 function Header() {
   const pathname = usePathname();
@@ -51,7 +52,10 @@ function Header() {
             </div>
           </nav>
           <Link href={PATH.login} className="login">
-            로그인
+            <div className="login__logo">
+              <FaUser />
+            </div>
+            <span>로그인</span>
           </Link>
         </div>
         {pathname === "/community" || pathname === "/match/chat" || <SubMenu />}
