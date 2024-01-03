@@ -8,6 +8,7 @@ interface TextProps {
   medium?: boolean;
   small?: boolean;
   caption?: boolean;
+  className?: string;
 }
 
 /**
@@ -17,7 +18,14 @@ interface TextProps {
  * @param small 14px / 500(medium)
  * @param caption 12px / 400(normal)
  */
-function Text({ children, large, medium, small, caption }: TextProps) {
+function Text({
+  children,
+  large,
+  medium,
+  small,
+  caption,
+  className,
+}: TextProps) {
   return (
     <span
       className={classNames(
@@ -25,6 +33,7 @@ function Text({ children, large, medium, small, caption }: TextProps) {
         `${medium ? "text-2" : ""}`,
         `${small ? "text-3" : ""}`,
         `${caption ? "caption-text" : ""}`,
+        className,
       )}
     >
       {children}
