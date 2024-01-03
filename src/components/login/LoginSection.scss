@@ -1,7 +1,7 @@
 .login-block {
   max-width: 1200px;
   margin-inline: auto;
-  border: 1px solid gray;
+  color: white;
   padding: 4rem;
   height: 100vh;
   display: flex;
@@ -9,7 +9,9 @@
 }
 
 .login-content {
-  min-width: 75%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
 }
 
 .login-title {
@@ -19,9 +21,17 @@
   margin-bottom: 16px;
 }
 
+.login-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: 10rem;
+}
+
 .login-image {
-  width: 100%;
-  min-width: 3rem;
+  width: 40%;
   height: 100%;
   background: #000;
 }
