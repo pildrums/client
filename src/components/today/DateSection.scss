@@ -1,0 +1,39 @@
+@import "@/styles/colors.scss";
+
+.date-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  gap: 10px;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.live {
+  display: block;
+  padding: 4px 8px;
+  background: $tag-red;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.emphasis {
+  font-weight: 700;
+  color: $tag-red;
+}

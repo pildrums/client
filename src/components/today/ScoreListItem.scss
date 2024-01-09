@@ -1,0 +1,76 @@
+@import "@/styles/colors.scss";
+
+.score-item-block {
+  height: 80px;
+  background: $surface;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+    width: 50%;
+    height: inherit;
+    padding: 0 40px;
+    border-radius: 8px;
+    &:hover {
+      background: linear-gradient(to right, #ff7854, #fd493f, $surface);
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    flex-flow: row-reverse;
+    gap: 24px;
+    cursor: pointer;
+    // width 값은 선택한 비율에 따라 바꾸도록 변경
+    width: 50%;
+    height: inherit;
+    padding: 0 40px;
+    border-radius: 8px;
+    &:hover {
+      background: linear-gradient(to right, $surface, #53a1ff, #5c70ff);
+    }
+  }
+}
+
+.team-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-info-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.team-info-right {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-end;
+}
+
+.active-left {
+  background: linear-gradient(to right, #ff7854, #fd493f);
+}
+
+.active-right {
+  background: linear-gradient(to right, #53a1ff, #5c70ff);
+}
+
+.match-day {
+  padding: 16px;
+}

@@ -1,16 +1,12 @@
-import Link from "next/link";
+import { Metadata } from "next";
+import LoginSection from "@/components/login/LoginSection";
+
+export const metadata: Metadata = {
+  title: "플레이닷 | 로그인",
+};
 
 function LoginPage() {
-  return (
-    <>
-      <head>
-        <title>승리요정 - 로그인</title>
-        <meta name="description" content="승리요정 로그인" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </head>
-      <Link href="/">홈으로</Link>
-    </>
-  );
+  return <LoginSection />;
 }
 
 export default LoginPage;
