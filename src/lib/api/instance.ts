@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig } from "axios";
 
-const BASE_URL = "";
+const BASE_URL = "https://api.tmbservice.net/";
 
 const instanceConfig: AxiosRequestConfig = {
   baseURL: BASE_URL,

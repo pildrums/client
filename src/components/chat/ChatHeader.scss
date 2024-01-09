@@ -1,0 +1,48 @@
+.chat-header {
+  background-color: rgb(213, 213, 213);
+  display: flex;
+  position: fixed;
+  top: 50px;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  &__button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+  }
+  &__button:hover {
+    cursor: pointer;
+  }
+  &__score {
+    font-weight: 700;
+    font-size: 24px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    gap: 6px;
+    .date {
+      font-size: 12px;
+    }
+    .teams {
+      display: flex;
+      gap: 12px;
+      &__name {
+        font-weight: 700;
+      }
+      &__vs {
+        color: gray;
+      }
+    }
+  }
+}

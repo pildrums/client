@@ -1,17 +1,17 @@
 @import "@/styles/fonts.scss";
 
-.text_1 {
+.text-1 {
   @include text1;
 }
 
-.text_2 {
+.text-2 {
   @include text2;
 }
 
-.text_3 {
+.text-3 {
   @include text3;
 }
 
-.caption_text {
+.caption-text {
   @include caption_text;
 }

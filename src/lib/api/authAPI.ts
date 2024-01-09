@@ -3,28 +3,24 @@ import { fetchData } from "./commonAPI";
 // 로그인
 // POST
 // requestBody - email: string, password: string
-export const login = async (email: string, password: string) => {
+export const login = () => {
   try {
     const requestBody = {
-      email,
-      password,
+      email: "playdot2",
+      password: "test",
     };
-    return fetchData("login", "post", requestBody);
+    const res = fetchData("login", "post", requestBody);
+    return res;
   } catch (error) {
     console.error(error);
   }
 };
 
-// 회원가입
-// POST
-// requestBody - email: string, password: string
-export const register = async (email: string, password: string) => {
+// 구단 조회
+// GET
+export const teams = async () => {
   try {
-    const requestBody = {
-      email,
-      password,
-    };
-    return fetchData("register", "post", requestBody);
+    return fetchData("teams", "get");
   } catch (error) {
     console.error(error);
   }
