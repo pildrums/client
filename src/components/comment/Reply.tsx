@@ -1,4 +1,5 @@
 import { ChangeEvent } from "react";
+import "./Reply.scss";
 
 interface ReplyProps {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
