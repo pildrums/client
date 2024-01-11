@@ -2,7 +2,7 @@
 import classNames from "classnames";
 import Image from "next/image";
 
-import "./LoginButton.scss";
+import "@/components/login/LoginButton.scss";
 
 function LoginButton() {
   const BUTTON_INFO = [

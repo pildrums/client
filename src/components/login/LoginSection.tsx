@@ -1,8 +1,8 @@
-import Title from "../common/Title";
-import LoginButton from "./LoginButton";
-
-import "./LoginSection.scss";
 import Image from "next/image";
+
+import Title from "@/components/common/Title";
+import LoginButton from "@/components/login/LoginButton";
+import "@/components/login/LoginSection.scss";
 
 function LoginSection() {
   return (
