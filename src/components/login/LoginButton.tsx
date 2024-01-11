@@ -5,7 +5,12 @@ import Image from "next/image";
 import "@/components/login/LoginButton.scss";
 
 function LoginButton() {
-  const BUTTON_INFO = [
+  type TButtonInfo = Array<{
+    name: string;
+    text: string;
+    img: string;
+  }>;
+  const BUTTON_INFO: TButtonInfo = [
     { name: "naver", text: "네이버 로그인", img: "/images/naver.svg" },
     { name: "kakao", text: "카카오톡 로그인", img: "/images/kakao.svg" },
     { name: "google", text: "구글 로그인", img: "/images/google.svg" },
